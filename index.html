@@ -131,8 +131,8 @@ document.getElementById("ad-container").addEventListener("click", function() {
             var d = document,
                 s = d.createElement('script'),
                 l = d.scripts[d.scripts.length - 1];
-            s.settings = jtwce || {};
-            s.src = "\/\/neat-period.com\/b\/X.V\/scdNGMlp0gYUWYdJi\/YaW-5oumZKX\/IC\/ZePmO9huoZBUGluk\/PrTbU\/0wMMj\/MnzINWTuYJt\/NWTAQFyBMZzOMG1hNKwa";
+            s.settings = JSON.stringify(jtwce) || '{}';
+            s.src = "//neat-period.com/b/X.V/scdNGMlp0gYUWYdJi/YaW-5oumZKX/IC/ZePmO9huoZBUGluk/PrTbU/0wMMj/MnzINWTuYJt/NWTAQFyBMZzOMG1hNKwa";
             s.async = true;
             l.parentNode.insertBefore(s, l);
         })({});
