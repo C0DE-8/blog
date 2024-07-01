@@ -58,7 +58,7 @@ body {
 
 /* Hero section styles */
 .hero {
-    background: url('./image/ads-hero.jpeg') no-repeat center center/cover;
+    background: url('https://static.vecteezy.com/system/resources/previews/026/566/882/non_2x/happy-man-with-laptop-bw-concept-spot-illustration-programmer-coding-2d-cartoon-flat-line-monochromatic-character-for-web-ui-design-freelance-editable-isolated-outline-hero-image-vector.jpg') no-repeat center center/cover;
     color: #fff;
     text-align: center;
     padding: 100px 0;
