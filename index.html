@@ -98,7 +98,7 @@
 
     <section>
       <div id="ad-container">click here</div>
-      <div id="ads-id"></div>
+      <div id="load-content"></div>
       <div id="ads-id"></div>
       <div id="ads-id"></div>
       <div id="ads-id"></div>
@@ -125,18 +125,36 @@
         <p>&copy; 2024 code0-B. All rights reserved.</p>
       </div>
     </footer>
-    <script>
-document.getElementById("ad-container").addEventListener("click", function() {
-        (function(jtwce){
-            var d = document,
-                s = d.createElement('script'),
-                l = d.scripts[d.scripts.length - 1];
-            s.settings = JSON.stringify(jtwce) || '{}';
-            s.src = "//neat-period.com/b/X.V/scdNGMlp0gYUWYdJi/YaW-5oumZKX/IC/ZePmO9huoZBUGluk/PrTbU/0wMMj/MnzINWTuYJt/NWTAQFyBMZzOMG1hNKwa";
-            s.async = true;
-            l.parentNode.insertBefore(s, l);
-        })({});
-    });
+   <script>
+document.getElementById("load-content").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+
+    (function(nvs){
+        var contentContainer = document.getElementById("content-container");
+        
+        // Fetch the content from the specified URL
+        fetch("https://neat-period.com/bJX.VnsldcGKlG0LYzWzd/iUYoW/5Eu/ZjXtID/Qe/mp9IurZMUolPk/PvTtUE0iMDj-MZzJNiTgYRtjN/TWQ/y/MAzVMD1/N/wY")
+            .then(response => response.text())
+            .then(data => {
+                // Clear the existing content
+                contentContainer.innerHTML = '';
+                
+                // Create a temporary element to parse the fetched HTML
+                var tempDiv = document.createElement('div');
+                tempDiv.innerHTML = data;
+
+                // Move all child nodes from the temporary element to the content container
+                while (tempDiv.firstChild) {
+                    contentContainer.appendChild(tempDiv.firstChild);
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching content:', error);
+                contentContainer.innerHTML = 'An error occurred while loading content.';
+            });
+    })({});
+});
 </script>
+
   </body>
 </html>
